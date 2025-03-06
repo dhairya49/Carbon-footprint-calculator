@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Carbon Footprint Calculator</h2>
+        
+        <div class="sections-container">
+        <div class="section transport-section">
+            <h3>Transport</h3>
+            <label for="transport">Weekly transportation (km):</label>
+            <input type="number" id="transport" required>
+            <button onclick="calculateTransport()" class="calculate-button">Calculate Transport</button>
+            <div id="transport-result" class="result"></div>
+        </div>
+
+        <div class="section energy-section">
+            <h3>Energy</h3>
+            <label for="energy">Monthly energy usage (kWh):</label>
+            <input type="number" id="energy" required>
+            <button onclick="calculateEnergy()" class="calculate-button">Calculate Energy</button>
+            <div id="energy-result" class="result"></div>
+        </div>
+
+        <div class="section diet-section">
+            <h3>Diet</h3>
+            <label for="diet">Diet type:</label>
+            <select id="diet" required>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="omnivore">Omnivore</option>
+                <option value="meat-heavy">Meat Heavy</option>
+            </select>
+            <button onclick="calculateDiet()" class="calculate-button">Calculate Diet</button>
+            <div id="diet-result" class="result"></div>
+        </div>
+        </div>
+        <button onclick="calculateTotal()" class="calculate-total">Calculate Total Footprint</button>
+        <div id="total-result" class="result total"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

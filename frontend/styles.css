@@ -1,0 +1,184 @@
+body {
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #43cea2;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(67, 206, 162, 0.2);
+}
+
+.sections-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.section h3 {
+    color: #185a9d;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(24, 90, 157, 0.2);
+}
+
+/* Update section styles without gradients */
+.transport-section { 
+    border-top: 4px solid #43cea2;
+    border-left: 4px solid #43cea2;
+}
+
+.energy-section { 
+    border-top: 4px solid #185a9d;
+    border-left: 4px solid #185a9d;
+}
+
+.diet-section { 
+    border-top: 4px solid #2a9d8f;
+    border-left: 4px solid #2a9d8f;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #43cea2;
+    box-shadow: 0 0 0 3px rgba(67, 206, 162, 0.2);
+}
+
+label {
+    font-weight: 500;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(67, 206, 162, 0.1);
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid rgba(67, 206, 162, 0.2);
+}
+
+.total {
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(24, 90, 157, 0.1), rgba(67, 206, 162, 0.1));
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(24, 90, 157, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 15px 30px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 206, 162, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.calculate-button {
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.calculate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(67, 206, 162, 0.2);
+}
+
+.calculate-total {
+    width: 100%;
+    padding: 15px 30px;
+    margin-top: 30px;
+    background: linear-gradient(to right, #185a9d, #43cea2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.calculate-total:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(24, 90, 157, 0.3);
+}
+
+@media (max-width: 768px) {
+    .sections-container {
+        flex-direction: column;
+    }
+    
+    .section {
+        min-width: 100%;
+    }
+}
